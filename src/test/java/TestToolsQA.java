@@ -45,6 +45,15 @@ public class TestToolsQA {
 
         $("#example-modal-sizes-title-lg").should(appear);
         $("#example-modal-sizes-title-lg").shouldHave(text("Thanks for submitting the form"));
-        $(".table-responsive").shouldHave(text("Ivan"),text("Ivanov"),text("1234567890"));
+        $(".table-responsive").$(byText("Student Name")).parent().shouldHave(text("Ivan Ivanov"));
+        $(".table-responsive").$(byText("Student Email")).parent().shouldHave(text("IvanovIvan@mail.ru"));
+        $(".table-responsive").$(byText("Gender")).parent().shouldHave(text("Male"));
+        $(".table-responsive").$(byText("Mobile")).parent().shouldHave(text("1234567890"));
+        $(".table-responsive").$(byText("Date of Birth")).parent().shouldHave(text("30 June,1990"));
+        $(".table-responsive").$(byText("Subjects")).parent().shouldHave(text("Accounting, Commerce"));
+        $(".table-responsive").$(byText("Hobbies")).parent().shouldHave(text("Sports"));
+        $(".table-responsive").$(byText("Picture")).parent().shouldHave(text("photo_2022-09-18_22-26-00.jpg"));
+        $(".table-responsive").$(byText("Address")).parent().shouldHave(text("Russia, Saint-Petersburg"));
+        $(".table-responsive").$(byText("State and City")).parent().shouldHave(text("Haryana Panipat"));
     }
 }
